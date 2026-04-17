@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0;background:transparent;color:white;font-weight:bold;font-size:18px;text-align:center;">
+
+<div id="t">05:00</div>
+
+<script>
+let s = 300;
+
+function f(){
+let m = Math.floor(s/60);
+let sec = s%60;
+document.getElementById('t').innerHTML =
+(m<10?'0':'')+m+':'+(sec<10?'0':'')+sec;
+
+if(s>0){s--; setTimeout(f,1000);}
+}
+
+f();
+</script>
+
+</body>
+</html>
